@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;600&display=swap');
         body {
             font-family: 'Inter', system_ui, sans-serif;
-            background: #050505;
+            background: #0a0a0f;
         }
         .font-display {
             font-family: 'Space Grotesk', 'Inter', sans-serif;
@@ -19,20 +19,14 @@
         }
         .neon {
             text-shadow: 
-                0 0 5px #00ff9f,
-                0 0 10px #00ff9f,
-                0 0 20px #00ff9f,
-                0 0 40px #00ff9f;
-            animation: neon-flicker 1.5s infinite alternate;
-        }
-        @keyframes neon-flicker {
-            0% { text-shadow: 0 0 5px #00ff9f, 0 0 10px #00ff9f, 0 0 20px #00ff9f; }
-            100% { text-shadow: 0 0 10px #00ff9f, 0 0 25px #00ff9f, 0 0 50px #00ff9f; }
+                0 0 8px #00d4ff,
+                0 0 16px #00d4ff,
+                0 0 32px #00d4ff;
         }
         .glass {
-            background: rgba(5, 5, 5, 0.85);
+            background: rgba(10, 10, 15, 0.92);
             backdrop-filter: blur(24px);
-            border: 1px solid rgba(0, 255, 159, 0.15);
+            border: 1px solid rgba(0, 212, 255, 0.12);
         }
         .section-header {
             font-size: 4.2rem;
@@ -44,47 +38,35 @@
             transition: all 0.3s cubic-bezier(0.23, 1.0, 0.32, 1);
         }
         .nav-link:hover {
-            color: #00ff9f;
-            text-shadow: 0 0 8px #00ff9f;
+            color: #00d4ff;
         }
         .futuristic-btn {
             position: relative;
             overflow: hidden;
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            box-shadow: 0 0 15px rgba(0, 255, 159, 0.3);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.25);
         }
         .futuristic-btn:hover {
-            box-shadow: 0 0 30px rgba(0, 255, 159, 0.6);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
             transform: translateY(-2px);
         }
         .matrix-bg {
             position: relative;
             overflow: hidden;
         }
-        .glitch {
-            animation: glitch 1s infinite;
-        }
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
-        }
         .stat-number {
             font-variant-numeric: tabular-nums;
-            text-shadow: 0 0 15px #00ff9f;
+            text-shadow: 0 0 12px #00d4ff;
         }
     </style>
 </head>
-<body class="bg-[#050505] text-white overflow-x-hidden">
+<body class="bg-[#0a0a0f] text-white overflow-x-hidden">
     <!-- Navbar -->
     <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
         <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-x-4">
-                <div class="w-10 h-10 rounded-2xl bg-[#00ff9f] flex items-center justify-center shadow-[0_0_20px_#00ff9f]">
-                    <span class="text-[#050505] font-black text-3xl">K</span>
+                <div class="w-10 h-10 rounded-2xl bg-[#00d4ff] flex items-center justify-center shadow-[0_0_18px_#00d4ff]">
+                    <span class="text-[#0a0a0f] font-black text-3xl">K</span>
                 </div>
                 <div class="font-display text-4xl tracking-[-2px]">KONG2</div>
             </div>
@@ -97,12 +79,12 @@
             
             <div class="flex items-center gap-x-4">
                 <a href="https://github.com/Kong2-CN" target="_blank" 
-                   class="px-6 py-2.5 text-sm font-medium border border-white/20 hover:border-[#00ff9f] rounded-2xl flex items-center gap-x-2 transition-all hover:text-[#00ff9f]">
+                   class="px-6 py-2.5 text-sm font-medium border border-white/20 hover:border-[#00d4ff] rounded-2xl flex items-center gap-x-2 transition-all hover:text-[#00d4ff]">
                     <i class="fab fa-github text-lg"></i>
                     <span>GITHUB</span>
                 </a>
                 <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
-                        class="futuristic-btn px-7 py-3 bg-[#00ff9f] text-[#050505] text-sm font-bold rounded-2xl flex items-center gap-x-2 hover:bg-white transition-all">
+                        class="futuristic-btn px-7 py-3 bg-[#00d4ff] text-[#0a0a0f] text-sm font-bold rounded-2xl flex items-center gap-x-2 hover:bg-white transition-all">
                     <span>联系我</span>
                 </button>
             </div>
@@ -112,12 +94,12 @@
     <!-- Hero -->
     <div class="min-h-[100dvh] flex items-center relative matrix-bg pt-20" id="hero">
         <div class="max-w-5xl mx-auto px-8 text-center relative z-10">
-            <div class="inline-flex items-center gap-x-2 px-5 py-1.5 rounded-full border border-[#00ff9f]/40 bg-[#00ff9f]/10 mb-8">
-                <div class="w-2 h-2 bg-[#00ff9f] rounded-full animate-pulse"></div>
-                <span class="text-xs tracking-[4px] font-mono text-[#00ff9f]">冰封东北 • 2026</span>
+            <div class="inline-flex items-center gap-x-2 px-5 py-1.5 rounded-full border border-[#00d4ff]/40 bg-[#00d4ff]/10 mb-8">
+                <div class="w-2 h-2 bg-[#00d4ff] rounded-full animate-pulse"></div>
+                <span class="text-xs tracking-[4px] font-mono text-[#00d4ff]">冰封东北 • 2026</span>
             </div>
             
-            <h1 class="section-header text-[110px] md:text-[140px] leading-[0.92] mb-6 tracking-[-5px] neon glitch">
+            <h1 class="section-header text-[110px] md:text-[140px] leading-[0.92] mb-6 tracking-[-5px] neon">
                 KONG2<br>数字档案
             </h1>
             
@@ -127,13 +109,13 @@
             
             <div class="flex flex-col sm:flex-row gap-5 justify-center">
                 <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
-                        class="futuristic-btn group px-12 py-5 bg-white hover:bg-[#00ff9f] text-[#050505] font-bold text-xl rounded-3xl flex items-center justify-center gap-x-3 transition-all active:scale-[0.985]">
+                        class="futuristic-btn group px-12 py-5 bg-white hover:bg-[#00d4ff] text-[#0a0a0f] font-bold text-xl rounded-3xl flex items-center justify-center gap-x-3 transition-all active:scale-[0.985]">
                     <span>进入档案</span>
                     <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
                 </button>
                 
                 <button onclick="window.open('https://github.com/Kong2-CN/laozhang-first-repo', '_blank')"
-                        class="px-10 py-5 border border-white/30 hover:border-[#00ff9f] text-xl font-medium rounded-3xl flex items-center gap-x-3 transition-all hover:text-[#00ff9f]">
+                        class="px-10 py-5 border border-white/30 hover:border-[#00d4ff] text-xl font-medium rounded-3xl flex items-center gap-x-3 transition-all hover:text-[#00d4ff]">
                     <i class="fab fa-github text-2xl"></i>
                     <span>查看源码</span>
                 </button>
@@ -151,7 +133,7 @@
         <div class="grid md:grid-cols-12 gap-x-10 items-center">
             <div class="md:col-span-5">
                 <div class="sticky top-24">
-                    <div class="text-[#00ff9f] text-sm tracking-[5px] font-mono mb-5">CHAPTER 01</div>
+                    <div class="text-[#00d4ff] text-sm tracking-[5px] font-mono mb-5">CHAPTER 01</div>
                     <h2 class="section-header text-[82px] leading-none tracking-tighter">起源</h2>
                 </div>
             </div>
@@ -167,11 +149,11 @@
                 
                 <div class="pt-4 flex flex-wrap gap-4 text-sm">
                     <div class="px-5 py-2.5 border border-white/20 rounded-2xl flex items-center gap-x-3">
-                        <i class="fas fa-map-marker-alt text-[#00ff9f]"></i>
+                        <i class="fas fa-map-marker-alt text-[#00d4ff]"></i>
                         <span>哈尔滨，中国</span>
                     </div>
                     <div class="px-5 py-2.5 border border-white/20 rounded-2xl flex items-center gap-x-3">
-                        <i class="fas fa-calendar text-[#00ff9f]"></i>
+                        <i class="fas fa-calendar text-[#00d4ff]"></i>
                         <span>创立于 2026</span>
                     </div>
                 </div>
@@ -183,19 +165,19 @@
     <div class="max-w-5xl mx-auto px-8 py-20 border-t border-white/10">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-3xl overflow-hidden">
             <div class="glass p-9 text-center">
-                <div class="text-[72px] font-display text-[#00ff9f] stat-number">01</div>
+                <div class="text-[72px] font-display text-[#00d4ff] stat-number">01</div>
                 <div class="text-xs tracking-[3px] mt-2 text-white/50">仓库</div>
             </div>
             <div class="glass p-9 text-center">
-                <div class="text-[72px] font-display text-[#00ff9f] stat-number">00</div>
+                <div class="text-[72px] font-display text-[#00d4ff] stat-number">00</div>
                 <div class="text-xs tracking-[3px] mt-2 text-white/50">提交</div>
             </div>
             <div class="glass p-9 text-center">
-                <div class="text-[72px] font-display text-[#00ff9f] stat-number">∞</div>
+                <div class="text-[72px] font-display text-[#00d4ff] stat-number">∞</div>
                 <div class="text-xs tracking-[3px] mt-2 text-white/50">潜力</div>
             </div>
             <div class="glass p-9 text-center">
-                <div class="text-[72px] font-display text-[#00ff9f] stat-number">1</div>
+                <div class="text-[72px] font-display text-[#00d4ff] stat-number">1</div>
                 <div class="text-xs tracking-[3px] mt-2 text-white/50">传奇</div>
             </div>
         </div>
@@ -205,23 +187,23 @@
     <div id="projects" class="max-w-5xl mx-auto px-8 py-28 border-t border-white/10">
         <div class="flex justify-between items-end mb-14">
             <div>
-                <div class="text-[#00ff9f] text-sm tracking-[5px] font-mono mb-4">CHAPTER 02</div>
+                <div class="text-[#00d4ff] text-sm tracking-[5px] font-mono mb-4">CHAPTER 02</div>
                 <h2 class="section-header text-[82px] tracking-tighter">项目</h2>
             </div>
             <a href="https://github.com/Kong2-CN?tab=repositories" target="_blank" 
-               class="hidden md:flex items-center gap-x-2 text-sm hover:text-[#00ff9f] transition-colors">
+               class="hidden md:flex items-center gap-x-2 text-sm hover:text-[#00d4ff] transition-colors">
                 查看全部 <i class="fas fa-arrow-right ml-2"></i>
             </a>
         </div>
         
         <div class="grid md:grid-cols-2 gap-6">
-            <div class="group glass p-10 rounded-3xl border border-white/10 hover:border-[#00ff9f]/60 transition-all">
+            <div class="group glass p-10 rounded-3xl border border-white/10 hover:border-[#00d4ff]/60 transition-all">
                 <div class="flex justify-between items-start">
                     <div>
                         <div class="text-xs tracking-[2px] text-white/50">01 / 2026</div>
-                        <h3 class="text-5xl font-display tracking-tight mt-4 group-hover:text-[#00ff9f] transition-colors">LAOZANG-FIRST-REPO</h3>
+                        <h3 class="text-5xl font-display tracking-tight mt-4 group-hover:text-[#00d4ff] transition-colors">LAOZANG-FIRST-REPO</h3>
                     </div>
-                    <i class="fas fa-external-link-alt text-3xl text-white/30 group-hover:text-[#00ff9f] transition-colors"></i>
+                    <i class="fas fa-external-link-alt text-3xl text-white/30 group-hover:text-[#00d4ff] transition-colors"></i>
                 </div>
                 <p class="mt-7 text-white/75 text-[17px]">第一次传输。一个在深夜用零基础完成的极简数字名片。</p>
                 <div class="mt-9 flex flex-wrap gap-2 text-xs">
@@ -231,7 +213,7 @@
                 </div>
             </div>
             
-            <div class="group glass p-10 rounded-3xl border border-white/10 hover:border-[#00ff9f]/60 transition-all opacity-70">
+            <div class="group glass p-10 rounded-3xl border border-white/10 hover:border-[#00d4ff]/60 transition-all opacity-70">
                 <div class="flex justify-between">
                     <div>
                         <div class="text-xs tracking-[2px] text-white/50">即将到来</div>
@@ -244,26 +226,26 @@
     </div>
 
     <!-- The Lab -->
-    <div id="lab" class="max-w-5xl mx-auto px-8 py-28 border-t border-white/10 bg-[#0a0a0a]">
+    <div id="lab" class="max-w-5xl mx-auto px-8 py-28 border-t border-white/10 bg-[#111113]">
         <div class="max-w-2xl">
-            <div class="text-[#00ff9f] text-sm tracking-[5px] font-mono mb-5">CHAPTER 03</div>
+            <div class="text-[#00d4ff] text-sm tracking-[5px] font-mono mb-5">CHAPTER 03</div>
             <h2 class="section-header text-[82px] tracking-tighter mb-10">实验室</h2>
             <p class="text-[22px] text-white/80 leading-tight">这里是实验发生的地方。没有规则。没有上限。只有纯粹的信号。</p>
         </div>
         
         <div class="mt-16 grid md:grid-cols-3 gap-6">
             <div class="glass p-9 rounded-3xl">
-                <i class="fas fa-robot text-5xl text-[#00ff9f] mb-7"></i>
+                <i class="fas fa-robot text-5xl text-[#00d4ff] mb-7"></i>
                 <h4 class="font-bold text-2xl mb-4">AI 协作</h4>
                 <p class="text-white/70">和这个星球上最疯的AI一起打造。零怜悯，最大成果。</p>
             </div>
             <div class="glass p-9 rounded-3xl">
-                <i class="fas fa-satellite text-5xl text-[#00ff9f] mb-7"></i>
+                <i class="fas fa-satellite text-5xl text-[#00d4ff] mb-7"></i>
                 <h4 class="font-bold text-2xl mb-4">纯信号</h4>
                 <p class="text-white/70">没有噪音。只有来自世界冰封边缘的纯粹传输。</p>
             </div>
             <div class="glass p-9 rounded-3xl">
-                <i class="fas fa-infinity text-5xl text-[#00ff9f] mb-7"></i>
+                <i class="fas fa-infinity text-5xl text-[#00d4ff] mb-7"></i>
                 <h4 class="font-bold text-2xl mb-4">无上限</h4>
                 <p class="text-white/70">这个档案会持续进化。持续关注。</p>
             </div>
@@ -273,12 +255,12 @@
     <!-- Contact -->
     <div id="contact" class="max-w-5xl mx-auto px-8 py-28 border-t border-white/10 text-center">
         <div class="max-w-md mx-auto">
-            <div class="text-[#00ff9f] text-sm tracking-[5px] font-mono mb-5">最终传输</div>
+            <div class="text-[#00d4ff] text-sm tracking-[5px] font-mono mb-5">最终传输</div>
             <h2 class="section-header text-[68px] tracking-tighter mb-8">来一起搞点<br>疯狂的事吧</h2>
             <p class="text-white/70 text-xl mb-12">有让正常人害怕的想法吗？我听着。</p>
             
             <a href="https://github.com/Kong2-CN" target="_blank"
-               class="inline-flex items-center justify-center gap-x-4 px-14 py-5 bg-[#00ff9f] hover:bg-white text-[#050505] font-black text-xl rounded-3xl transition-all active:scale-[0.985]">
+               class="inline-flex items-center justify-center gap-x-4 px-14 py-5 bg-[#00d4ff] hover:bg-white text-[#0a0a0f] font-black text-xl rounded-3xl transition-all active:scale-[0.985]">
                 <span>在 GITHUB 上联系我</span>
                 <i class="fas fa-paper-plane text-2xl"></i>
             </a>
@@ -299,7 +281,7 @@
             const canvas = document.createElement('canvas');
             canvas.style.position = 'absolute';
             canvas.style.inset = '0';
-            canvas.style.opacity = '0.12';
+            canvas.style.opacity = '0.07';
             canvas.style.pointerEvents = 'none';
             hero.appendChild(canvas);
             
@@ -312,52 +294,40 @@
             window.addEventListener('resize', resize);
             
             const chars = '01KONG2东北数字档案XAI';
-            const fontSize = 15;
+            const fontSize = 14;
             const columns = Math.floor(canvas.width / fontSize);
             const drops = Array(columns).fill(1);
             
             function draw() {
-                ctx.fillStyle = 'rgba(5, 5, 5, 0.08)';
+                ctx.fillStyle = 'rgba(10, 10, 15, 0.06)';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = '#00ff9f';
+                ctx.fillStyle = '#00d4ff';
                 ctx.font = fontSize + 'px monospace';
                 
                 for (let i = 0; i < drops.length; i++) {
                     const text = chars[Math.floor(Math.random() * chars.length)];
                     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
                     
-                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.97) {
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
                         drops[i] = 0;
                     }
                     drops[i]++;
                 }
             }
-            setInterval(draw, 55);
+            setInterval(draw, 65);
         }
         
         window.onload = function() {
             initMatrixRain();
             
-            // Logo chaos easter egg
             const logo = document.querySelector('.fa-github');
             if (logo) {
                 logo.addEventListener('click', () => {
                     const body = document.body;
                     body.style.transition = 'filter 0.4s';
-                    body.style.filter = 'hue-rotate(200deg) saturate(1.4)';
+                    body.style.filter = 'hue-rotate(220deg)';
                     setTimeout(() => body.style.filter = 'none', 900);
                 });
-            }
-            
-            // Random neon flicker on title
-            const title = document.querySelector('.neon');
-            if (title) {
-                setInterval(() => {
-                    title.style.textShadow = '0 0 8px #00ff9f, 0 0 25px #00ff9f, 0 0 55px #00ff9f';
-                    setTimeout(() => {
-                        if (title) title.style.textShadow = '0 0 5px #00ff9f, 0 0 15px #00ff9f, 0 0 35px #00ff9f';
-                    }, 180);
-                }, 2400);
             }
         }
     </script>
