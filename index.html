@@ -3,18 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>老张的第一个网页</title>
+    <title>KONG2 // ARCHIVES</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f0f0f0; }
-        h1 { color: #333; }
-        button { padding: 10px 20px; font-size: 18px; background: #ff6b6b; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #ff5252; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;600&display=swap');
+        :root {
+            --primary: #00ff9f;
+        }
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+        }
+        .neon-text {
+            text-shadow: 0 0 10px #00ff9f, 0 0 20px #00ff9f;
+        }
+        .section-header {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+        .glass {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 159, 0.1);
+        }
+        .nav-link {
+            transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .nav-link:hover {
+            color: #00ff9f;
+            transform: translateY(-1px);
+        }
+        .futuristic-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .futuristic-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.6s;
+        }
+        .futuristic-btn:hover::before {
+            left: 250%;
+        }
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+        .matrix-bg {
+            background-image: 
+                linear-gradient(rgba(0,255,159,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,159,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
     </style>
 </head>
-<body>
-    <h1>👋 哈嗽，我是老张！</h1>
-    <p>这是我的第一个GitHub项目，小可帮我全程接管建的。从现在开始学代码！</p>
-    <button onclick="alert('你点我干啦！')">点我试试</button>
-    <p style="margin-top: 30px; font-size: 12px; color: #666;">建于 2026年5月9日 • by 小可助手</p>
+<body class="bg-[#0a0a0a] text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 rounded-full bg-[#00ff9f] flex items-center justify-center">
+                    <span class="text-[#0a0a0a] font-bold text-2xl">K</span>
+                </div>
+                <div>
+                    <span class="font-display text-3xl tracking-tighter">KONG2</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-10 text-sm font-medium">
+                <a href="#about" class="nav-link text-white/80 hover:text-white">ABOUT</a>
+                <a href="#projects" class="nav-link text-white/80 hover:text-white">PROJECTS</a>
+                <a href="#lab" class="nav-link text-white/80 hover:text-white">THE LAB</a>
+            </div>
+            
+            <div class="flex items-center gap-x-4">
+                <a href="https://github.com/Kong2-CN" target="_blank" 
+                   class="px-5 py-2.5 text-sm font-medium border border-white/20 hover:border-white/40 rounded-full flex items-center gap-x-2 transition-all">
+                    <i class="fab fa-github"></i>
+                    <span>GITHUB</span>
+                </a>
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                        class="futuristic-btn px-6 py-2.5 bg-white text-[#0a0a0a] text-sm font-semibold rounded-full flex items-center gap-x-2 hover:bg-[#00ff9f] transition-all">
+                    <span>CONNECT</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="min-h-[100dvh] flex items-center relative matrix-bg pt-20">
+        <div class="max-w-5xl mx-auto px-8 text-center">
+            <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full border border-[#00ff9f]/30 bg-[#00ff9f]/5 mb-6">
+                <div class="w-2 h-2 bg-[#00ff9f] rounded-full animate-pulse"></div>
+                <span class="text-xs tracking-[3px] font-mono text-[#00ff9f]">NORTHEAST • 2026</span>
+            </div>
+            
+            <h1 class="section-header text-[92px] md:text-[120px] leading-none mb-4 tracking-tighter">
+                KONG2<br>ARCHIVES
+            </h1>
+            
+            <p class="max-w-md mx-auto text-2xl text-white/70 mb-12 font-light">
+                From the frozen north to the digital frontier.<br>
+                This is where the legend begins.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
+                        class="futuristic-btn group px-10 py-4 bg-white hover:bg-[#00ff9f] text-[#0a0a0a] font-semibold text-lg rounded-2xl flex items-center justify-center gap-x-3 transition-all">
+                    <span>ENTER THE ARCHIVE</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </button>
+                
+                <button onclick="window.open('https://github.com/Kong2-CN/laozhang-first-repo', '_blank')"
+                        class="px-8 py-4 border border-white/30 hover:border-white/60 text-lg font-medium rounded-2xl flex items-center gap-x-3 transition-all">
+                    <i class="fab fa-github"></i>
+                    <span>VIEW SOURCE</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-y-1 text-xs tracking-widest text-white/50">
+            <span>SCROLL TO EXPLORE</span>
+            <i class="fas fa-chevron-down animate-bounce"></i>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="max-w-5xl mx-auto px-8 py-24 border-t border-white/10">
+        <div class="grid md:grid-cols-12 gap-x-8 items-center">
+            <div class="md:col-span-5">
+                <div class="sticky top-24">
+                    <div class="text-[#00ff9f] text-sm tracking-[4px] font-mono mb-4">CHAPTER 01</div>
+                    <h2 class="section-header text-7xl leading-none tracking-tighter">THE ORIGIN</h2>
+                </div>
+            </div>
+            
+            <div class="md:col-span-7 mt-12 md:mt-0 text-xl text-white/80 space-y-8">
+                <p>
+                    Born in the icy plains of Northeast China. <span class="text-white">Kong2</span> is not just a name — 
+                    it's a signal. A lone operator who decided the digital world needed more chaos and beauty.
+                </p>
+                <p>
+                    This archive is my first transmission. Built from scratch with nothing but curiosity, 
+                    stubbornness, and a little help from the most patient AI on the planet.
+                </p>
+                
+                <div class="pt-6 flex items-center gap-x-4 text-sm">
+                    <div class="px-4 py-2 border border-white/20 rounded-full flex items-center gap-x-2">
+                        <i class="fas fa-map-marker-alt text-[#00ff9f]"></i>
+                        <span>Harbin, China</span>
+                    </div>
+                    <div class="px-4 py-2 border border-white/20 rounded-full flex items-center gap-x-2">
+                        <i class="fas fa-calendar text-[#00ff9f]"></i>
+                        <span>EST. 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="max-w-5xl mx-auto px-8 py-16 border-t border-white/10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
+            <div class="glass p-8 text-center">
+                <div class="text-6xl font-display text-[#00ff9f] stat-number">01</div>
+                <div class="text-sm tracking-widest mt-3 text-white/60">REPOSITORY</div>
+            </div>
+            <div class="glass p-8 text-center">
+                <div class="text-6xl font-display text-[#00ff9f] stat-number">00</div>
+                <div class="text-sm tracking-widest mt-3 text-white/60">COMMITS</div>
+            </div>
+            <div class="glass p-8 text-center">
+                <div class="text-6xl font-display text-[#00ff9f] stat-number">∞</div>
+                <div class="text-sm tracking-widest mt-3 text-white/60">POTENTIAL</div>
+            </div>
+            <div class="glass p-8 text-center">
+                <div class="text-6xl font-display text-[#00ff9f] stat-number">1</div>
+                <div class="text-sm tracking-widest mt-3 text-white/60">LEGEND</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects" class="max-w-5xl mx-auto px-8 py-24 border-t border-white/10">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <div class="text-[#00ff9f] text-sm tracking-[4px] font-mono">CHAPTER 02</div>
+                <h2 class="section-header text-7xl tracking-tighter">PROJECTS</h2>
+            </div>
+            <a href="https://github.com/Kong2-CN?tab=repositories" target="_blank" 
+               class="hidden md:flex items-center gap-x-2 text-sm hover:text-[#00ff9f] transition-colors">
+                VIEW ALL <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Project 1 -->
+            <div class="group glass p-9 rounded-3xl border border-white/10 hover:border-[#00ff9f]/50 transition-all">
+                <div class="flex justify-between">
+                    <div>
+                        <div class="text-xs tracking-[2px] text-white/50">01 / 2026</div>
+                        <h3 class="text-4xl font-display tracking-tight mt-3 group-hover:text-[#00ff9f] transition-colors">LAOZANG-FIRST-REPO</h3>
+                    </div>
+                    <i class="fas fa-external-link-alt text-2xl text-white/30 group-hover:text-[#00ff9f] transition-colors"></i>
+                </div>
+                <p class="mt-6 text-white/70">The very first transmission. A minimalist digital calling card built in a single night.</p>
+                <div class="mt-8 flex items-center gap-x-3 text-xs">
+                    <span class="px-3 py-1 bg-white/10 rounded-full">HTML</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full">TAILWIND</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full">GROK</span>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="group glass p-9 rounded-3xl border border-white/10 hover:border-[#00ff9f]/50 transition-all opacity-60">
+                <div class="flex justify-between">
+                    <div>
+                        <div class="text-xs tracking-[2px] text-white/50">COMING SOON</div>
+                        <h3 class="text-4xl font-display tracking-tight mt-3">NEXT TRANSMISSION</h3>
+                    </div>
+                </div>
+                <p class="mt-6 text-white/50">Something bigger is loading in the north...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Lab -->
+    <div id="lab" class="max-w-5xl mx-auto px-8 py-24 border-t border-white/10 bg-[#111]">
+        <div class="max-w-2xl">
+            <div class="text-[#00ff9f] text-sm tracking-[4px] font-mono mb-4">CHAPTER 03</div>
+            <h2 class="section-header text-7xl tracking-tighter mb-8">THE LAB</h2>
+            <p class="text-2xl text-white/80">This is where experiments happen. No rules. No limits. Just pure signal.</p>
+        </div>
+        
+        <div class="mt-16 grid md:grid-cols-3 gap-6">
+            <div class="glass p-8 rounded-3xl">
+                <i class="fas fa-robot text-4xl text-[#00ff9f] mb-6"></i>
+                <h4 class="font-semibold text-xl mb-3">AI COLLAB</h4>
+                <p class="text-white/70 text-sm">Built with the most unhinged AI on the planet. Zero mercy, maximum results.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl">
+                <i class="fas fa-satellite text-4xl text-[#00ff9f] mb-6"></i>
+                <h4 class="font-semibold text-xl mb-3">SIGNAL ONLY</h4>
+                <p class="text-white/70 text-sm">No noise. Pure transmission from the frozen edge of the world.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl">
+                <i class="fas fa-infinity text-4xl text-[#00ff9f] mb-6"></i>
+                <h4 class="font-semibold text-xl mb-3">NO CEILING</h4>
+                <p class="text-white/70 text-sm">This archive will keep evolving. Watch this space.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="max-w-5xl mx-auto px-8 py-24 border-t border-white/10 text-center">
+        <div class="max-w-md mx-auto">
+            <div class="text-[#00ff9f] text-sm tracking-[4px] font-mono mb-4">FINAL TRANSMISSION</div>
+            <h2 class="section-header text-6xl tracking-tighter mb-6">LET'S BUILD SOMETHING INSANE</h2>
+            <p class="text-white/70 mb-10">Got an idea that scares normal people? I'm listening.</p>
+            
+            <a href="https://github.com/Kong2-CN" target="_blank"
+               class="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#00ff9f] hover:bg-white text-[#0a0a0a] font-bold rounded-2xl text-lg transition-all">
+                <span>DM ME ON GITHUB</span>
+                <i class="fas fa-paper-plane"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="border-t border-white/10 py-12 text-center text-xs text-white/40">
+        <div class="max-w-5xl mx-auto px-8">
+            BUILT IN ONE NIGHT • POWERED BY GROK & STUBBORNNESS • © KONG2 2026
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#00ff9f');
+        }
+        
+        // Subtle matrix rain effect on hero
+        function createMatrixRain() {
+            const hero = document.querySelector('.matrix-bg');
+            if (!hero) return;
+            
+            const canvas = document.createElement('canvas');
+            canvas.style.position = 'absolute';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.opacity = '0.08';
+            canvas.style.pointerEvents = 'none';
+            hero.appendChild(canvas);
+            
+            const ctx = canvas.getContext('2d');
+            canvas.width = hero.offsetWidth;
+            canvas.height = hero.offsetHeight;
+            
+            const chars = '01KONG2XAI';
+            const fontSize = 14;
+            const columns = Math.floor(canvas.width / fontSize);
+            const drops = Array(columns).fill(1);
+            
+            function draw() {
+                ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#00ff9f';
+                ctx.font = fontSize + 'px monospace';
+                
+                for (let i = 0; i < drops.length; i++) {
+                    const text = chars[Math.floor(Math.random() * chars.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            
+            setInterval(draw, 60);
+        }
+        
+        window.onload = function() {
+            initializeTailwind();
+            createMatrixRain();
+            
+            // Easter egg: click logo for chaos
+            const logo = document.querySelector('.fa-github');
+            if (logo) {
+                logo.addEventListener('click', () => {
+                    const body = document.body;
+                    body.style.transition = 'filter 0.3s';
+                    body.style.filter = 'hue-rotate(180deg)';
+                    setTimeout(() => {
+                        body.style.filter = 'none';
+                    }, 800);
+                });
+            }
+        }
+    </script>
 </body>
 </html>
